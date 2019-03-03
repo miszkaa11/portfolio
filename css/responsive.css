@@ -1,0 +1,274 @@
+#menu-toggle,
+.toggle {
+	display: none;
+}
+
+@media all and (max-width: 1450px) {
+	#about figure img {
+		width: 55%;
+	}
+
+}
+
+@media all and (max-width: 1350px) {
+	#about figure img {
+		width: 69%;
+	}
+}
+
+@media all and (max-width: 1200px) {
+	.toggle {
+		font-size: 30px;
+		padding: 10px;
+	}
+
+	#menu {
+		position: static;
+	}
+
+	#menu ul {
+		text-align: center;
+	}
+
+	#header h1 {
+		top: 30%;
+	}
+
+	#header h2 {
+		top: 45%
+	}
+
+	#about {
+		text-align: center;
+		padding: 40px 50px 30px;
+	}
+	
+	#about p {
+		padding: 0;
+	}
+	
+	#about figure {
+		display: block;
+		width: 100%;
+		margin: 0;
+		text-align: center;
+	}
+
+	#icons figure {
+		margin-bottom: 20px 20px;
+	}
+
+	#about figure img {
+		margin-bottom: 35px;
+		width: 55%;
+	}
+
+	#icons figure figcaption {
+		margin: 10px;
+	}
+
+	#about .about-content {
+		display: block;
+		width: 100%;
+	}
+
+	#about h2 {
+		text-align: center;
+	}
+	
+	#about-content p {
+		text-align: left;
+	}
+
+	#about-skills {
+		padding-bottom: 0;
+	}
+
+	#about-skills p {
+		font-size: 20px;
+		margin: 0;
+	}
+
+	#pasje h2 {
+		margin: 30px 50px 50px;
+	}
+
+	section#pasje {
+		padding: 10px 0px 30px;
+	}
+	
+	.img {
+		margin-bottom: 0;
+	}
+
+	.img1,
+	.img2,
+	.img3 {
+		width: 33.3333%;
+	}
+
+	.content {
+		width: 100%;
+	}
+	
+
+}
+
+@media all and (max-width: 1150px) {
+	input[type="submit"] {
+		width: 100%;
+	}
+}
+
+@media all and (max-width: 992px) {
+	.toggle {
+		display: block;
+		text-align: center;
+		padding-right: 10px;
+		line-height: 40px;
+		color: #1ac056;
+	}
+
+	#menu span img {
+		width: 50px;
+		height: 40px;
+		margin-top: 10px;
+	}
+
+	#menu ul {
+		display: none;
+	}
+
+	#menu #menu-toggle:checked + ul {
+		display: block;
+	}
+
+	#menu ul .menu-item {
+		margin: 0;
+		text-align: center;
+		width: 100%;
+	}
+	
+	#menu ul .menu-item-home {
+		display: none;
+	}
+	
+	#pasje {
+		padding: 10px 50px 30px;
+		margin: 0 auto;
+	}
+
+	#about-skills {
+		margin: 0 auto;
+		padding-bottom: 0;
+	}
+
+	#icons {
+		padding-bottom: 0;
+	}
+
+	#icons figure {
+		margin-bottom: 20px;
+	}
+
+	#icons figure figcaption {
+		margin-top: 10px;
+	}
+	
+	#pasje h2 {
+		margin: 30px 50px 50px;
+	}
+	
+	section#pasje {
+		padding: 10px 0px 30px;
+	}
+	
+	
+	.img {
+		width: 100%;
+		display: block;
+		background-position: center;
+		background-size: cover;
+		margin: 0;
+	}
+
+	.form {
+		width: 100%;
+	}
+
+	.info {
+		width: 100%;
+	}
+
+	.info h3 {
+		text-align: center;
+	}
+
+	.social-media {
+		text-align: center;
+	}
+
+	address {
+		text-align: center;
+	}
+
+	input[type="submit"] {
+		width: 100%;
+	}
+}
+
+@media all and (max-width: 650px) {
+	#menu span img {
+		width: 40px;
+		height: 30px;
+	}
+	
+	#header h1 {
+		font-size: 40px;
+		top: 40%;
+	}
+
+	#header h2 {
+		font-size: 30px;
+		top: 50%;
+	}
+	#about {
+		padding: 40px 50px 0px;
+	}
+	
+	#about figure img {
+		width: 70%;
+	}
+
+	input[type="submit"] {
+		width: 100%;
+	}
+
+	textarea,
+	input {
+		text-align: center;
+	}
+}
+
+@media all and (max-width: 400px) {
+	#header h1 {
+		font-size: 45px;
+		top: 30%
+	}
+
+	#header h2 {
+		font-size: 25px;
+		top: 50%;
+	}
+	
+	#about figure img {
+		width: 80%;
+	}
+
+	.social-media a {
+		margin-bottom: 15px
+	}
+	#contact {
+		padding: 15px;
+	}
+}

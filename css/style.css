@@ -1,0 +1,512 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+}
+
+section {
+	padding: 40px 50px 30px;
+}
+
+/* Heplers */
+
+a {
+	color: #29ce29;
+	transition: all 0.5s;
+}
+
+a:hover {
+	color: gray;
+}
+
+span {
+	color: #29ce29;
+	font-weight: 300;
+}
+
+.info-span {
+	color: #fff;
+	line-height: 0.8;
+}
+
+h2 {
+	font-size: 30px;
+	margin: 30px 0 30px;
+}
+
+h3 {
+	margin: 30px 0 30px;
+	text-align: left;
+	font-size: 20px;
+}
+
+h4 {
+	font-size: 22px;
+}
+
+h5 {
+	font-size: 16px;
+}
+
+/* Nav menu */
+
+#menu {
+	background-color: #fff;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 999;
+	padding: 0 12px;
+}
+
+
+#menu ul {
+	margin: 0;
+	padding: 0;
+	text-align: right;
+}
+
+#menu ul li:first-child {
+	float: left;
+}
+
+#menu ul .menu-item {
+	display: inline-block;
+	margin: 0 40px;
+	line-height: 70px;
+	font-size: 20px;
+}
+
+#menu ul .menu-item a {
+	text-decoration: none;
+	color: #000;
+}
+
+#menu ul .menu-item a i {
+	color: #000;
+}
+
+#menu ul .menu-item a:hover {
+	color: #00b1ff;
+}
+
+
+/* Header */
+
+#header {
+	position: relative;
+	background-image: url('../img/drums-2599508_19202.jpg');
+	height: 100vh;
+	font-family: 'Roboto', sans-serif;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+#header h1 {
+	position: absolute;
+	color: #fff;
+	width: 100%;
+	text-align: center;
+	top: 40%;
+	font-size: 60px;
+	font-weight: 400;
+}
+
+#header h2 {
+	position: absolute;
+	color: #fff;
+	width: 100%;
+	text-align: center;
+	top: 53%;
+	font-size: 40px;
+	font-weight: 100;
+}
+
+#header h1 span {
+	color: #fff;
+}
+
+#header img {
+	width: 100%;
+}
+
+/* Section about me */
+
+#about {
+	padding: 50px 40px 30px;
+}
+
+#about h2 {
+	text-align: center;
+	font-weight: 300;
+}
+
+#about h2:after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 1px;
+	background: #29ce29;
+	margin: 20px auto 27px;
+}
+
+#about p {
+	font-size: 20px;
+	text-align: justify;
+	padding: 10px 10%;
+	color: #3e3e3e;
+	font-weight: 300;
+}
+
+#about .about-text1 {
+	margin-bottom: 50px;
+}
+
+#about figure {
+	display: inline-block;
+	width: 45%;
+	float: left;
+	margin: 0;
+	text-align: center;
+}
+
+#about figure img {
+	width: 65%;
+	border-bottom: 1px solid #29ce29;
+}
+
+#about-content p {
+	margin: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/* Section about skills */
+
+#about-skills {
+	text-align: center;
+}
+
+#about-skills h2 {
+	font-weight: 300;
+}
+
+#about-skills h2:after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 1px;
+	background: #29ce29;
+	margin: 20px auto 27px;
+}
+
+/*
+#about-skills h3 {
+	font-size: 20px;
+	text-align: left;
+}
+*/
+
+#about-skills p {
+	font-weight: 300;
+	color: #3e3e3e;
+	font-size: 20px;
+	text-align: left;
+}
+
+#icons {
+	margin: 80px 0 25px 0;
+}
+
+#icons figure {
+	text-align: center;
+	display: inline-block;
+}
+
+#icons figure img {
+	width: 47px;
+	height: 47px;
+	background-color: #fff;
+	transition: all 0.5s;
+}
+
+#icons figure img:hover {
+	transform: scale(1.4);
+	background-color: #fff;
+}
+
+#icons figure figcaption {
+	margin-top: 10px;
+}
+
+
+/* Section pasje */
+
+#pasje {}
+
+#pasje h2 {
+	font-weight: 300;
+	text-align: center;
+	margin: 30px 0 50px;
+}
+
+#pasje h2:after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 1px;
+	background: #29ce29;
+	margin: 20px auto 27px;
+}
+
+.img {
+	width: 33.3333%;
+	height: 350px;
+	display: inline-block;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	float: left;
+	margin-bottom: 50px;
+}
+
+.mask {
+	background-color: rgba(0, 0, 0, 0.6);
+	height: 100%;
+	padding: 10px;
+	opacity: 0;
+}
+
+.mask:hover {
+	opacity: 1;
+	transition: 1s;
+}
+
+
+
+.content {
+	text-align: center;
+	color: #fff;
+	top: 50%;
+	transform: translateY(-50%);
+	position: absolute;
+	padding: 0 15px;
+}
+
+.content p {
+	font-size: 15px;
+}
+
+.border {
+	height: 100%;
+	border: 1px solid #fff;
+	position: relative;
+}
+
+.img1 {
+	background-image: url(../img/music-2607264_1920.jpg);
+}
+
+.img2 {
+	background-image: url(../img/fotolia_105014325.jpg);
+}
+
+.img3 {
+	background-image: url(../img/todd-quackenbush-700-unsplash.jpg);
+}
+
+/* Section Paralax */
+
+#header-paralax {
+	background-image: url('../img/drums-2599508_19202.jpg');
+	height: 50vh;
+	font-family: 'Roboto', sans-serif;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+
+/* Contact */
+
+#contact {
+	background-color: #213b50;
+	color: #fff;
+}
+
+#contact .info-span {
+	font-size: 20px;
+	display: block;
+	margin: 20px 0px;
+}
+
+#contact h2 {
+	text-align: center;
+	font-weight: 200;
+	margin: 0;
+}
+
+#contact h3 {
+	font-size: 30px;
+}
+
+#contact h2:after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 1px;
+	background: #fff;
+	margin: 20px auto 27px;
+}
+
+#contact span {
+	font-weight: 300;
+	font-size: 30px;
+}
+
+/* Social media */
+
+.social-media a {
+	text-decoration: none;
+	display: inline-block;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	background-color: #213b50;
+	margin-right: 20px;
+}
+
+.social-media a .fa {
+	line-height: 50px;
+}
+
+.fa {
+	color: #fff;
+}
+
+.social-media {
+	margin-top: 65px;
+}
+
+/* Social media hoover */
+
+#fb:hover {
+	background-color: #fff;
+}
+
+#fb:hover i {
+	color: #4668b3;
+}
+
+#gplus:hover {
+	background-color: #fff;
+}
+
+#gplus:hover i {
+	color: #d95333;
+}
+
+#tw:hover {
+	background-color: #fff;
+}
+
+#tw:hover i {
+	color: #3095d3;
+}
+
+#linkedin:hover {
+	background-color: #fff;
+}
+
+#linkedin:hover i {
+	color: #434649;
+}
+
+#github:hover {
+	background-color: #fff;
+}
+
+#github:hover i {
+	color: #24292e;
+}
+
+
+/* Info */
+
+.info {
+	float: left;
+	font-weight: 300;
+}
+
+address {
+	font-style: normal;
+}
+
+.info h3 {
+	font-size: 50px;
+	font-weight: 100;
+	margin-bottom: 20px;
+	margin-top: 45px;
+}
+
+/* Form */
+
+.form {
+	float: right;
+	width: 45%;
+	margin-top: 35px;
+}
+
+input,
+select,
+textarea {
+	display: block;
+	width: 100%;
+	background-color: #1f4a6c;
+	padding: 15px;
+	margin-top: 15px;
+	border: 0;
+	color: #fff;
+	resize: none;
+	font-size: 15px;
+	border-radius: 3px;
+}
+
+input[type="submit"] {
+	color: #fff;
+	background-color: #1f4a6c;
+	width: 30%;
+	border: 0;
+	float: right;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.5s;
+	font-weight: bold;
+}
+
+input[type="submit"]:hover {
+	color: #fff;
+	background-color: #32b132;
+}
+
+/* Footer */
+
+footer {
+	background-color: #1f4a6c;
+}
+
+footer p {
+	text-align: left;
+	margin: 0;
+	padding: 10px;
+	color: #fff;
+	padding-left: 30px;
+}
