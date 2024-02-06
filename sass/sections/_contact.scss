@@ -1,0 +1,160 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/root" as *;
+
+/*
+    Contact Section
+
+-------------------------------------
+*/
+
+.contact {
+    &__content {
+        @include flex-center-between-start();
+
+        .contact-text {
+            @include flex-basis-55();
+            margin-top: 2.5rem;
+
+            .contact__header {
+                color: var(--color__gray);
+                margin-bottom: var(--content-box__margin-bottom);
+
+                i {
+                    color: var(--color__orange);
+                    margin-right: 0.5rem;
+                }
+            }
+
+            .contact__header:last-of-type {
+                margin-bottom: 0
+            }
+        }
+
+        .contact-form {
+            @include flex-basis-40();
+
+            .wpcf7-form {
+
+                input[type="text"],
+                input[type="email"],
+                input[type="tel"],
+                textarea {
+                    font-family: var(--font-style__primary);
+                    background-color: transparent;
+                    color: var(--color__gray);
+                    font-size: var(--font-size__text);
+                    font-weight: var(--font-weight__regular);
+                    width: 100%;
+                    height: var(--form-input__height);
+                    border-bottom: 2px solid var(--color__gray);
+                    border-right: 0;
+                    border-left: 0;
+                    border-top: 0;
+                    border-radius: var(--form-input__border-radius);
+                    padding: 0.5rem 0;
+                    margin: 0.3rem 0;
+                    outline: solid 2px transparent;
+                    @include transition();
+
+                    &:hover {
+                        border-bottom: 2px solid transparent;
+                    }
+
+                    &::placeholder {
+                        font-size: var(--font-size__text);
+                        font-weight: var(--font-weight__light);
+                        color: var(--color__gray);
+                    }
+
+                    &:focus::placeholder {
+                        color: var(--color__orange);
+                    }
+
+                    &:focus,
+                    &:active {
+                        padding: 0.5rem;
+                        color: var(--color__orange);
+                        border-bottom: 2px solid transparent;
+                    }
+
+                    &:focus-visible {
+                        outline: solid 2px;
+                    }
+                }
+
+                textarea {
+                    height: 70px;
+                    max-height: 100px;
+                    max-width: 600px;
+                    resize: auto;
+                }
+
+                .wpcf7-submit {
+                    width: auto;
+                    height: var(--button__height);
+                    background-color: var(--button__bg-color);
+                    color: var(--button__color);
+                    font-size: var(--button__font-size);
+                    font-weight: var(--font-weight__bold);
+                    border: none;
+                    border-radius: var(--button__border-radius);
+                    margin-top: 2rem;
+                    cursor: pointer;
+                    padding: 0.5rem 1rem;
+                    position: relative;
+                    @include transition();
+
+                    &:hover {
+                        color: var(--button__color-hover);
+                        background-color: var(--button__bg-color-hover);
+                    }
+
+                    i {
+                        margin-left: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+    Contact Section RWD
+
+-------------------------------------
+*/
+
+@media screen and (max-width: 1199px) {
+    .contact {
+
+        &__content {
+
+            .contact-text,
+            .contact-form {
+                flex-basis: 45%;
+            }
+
+            .contact-text {
+
+                .contact__header {
+                    display: flex;
+                }   
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .contact {
+
+        &__content {
+            flex-direction: column;
+            
+            .contact-text,
+            .contact-form {
+                flex-basis: 100%;
+                width: 100%;
+            }
+        }
+    }
+}

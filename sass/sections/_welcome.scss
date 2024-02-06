@@ -1,0 +1,27 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/root" as *;
+
+/*
+    Welcome Section
+
+-------------------------------------
+*/
+
+.welcome {
+    &__content {
+        @include flex-center-column();
+        height: 100vh;
+
+        .welcome__inner {
+
+            .welcome__header {
+                margin-bottom: var(--content-box__margin-bottom);
+                text-align: center;
+
+                &:last-of-type {
+                    color: var(--color__blue-light);
+                }
+            }
+        }
+    }
+}

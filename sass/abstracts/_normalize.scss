@@ -1,0 +1,53 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/root" as *;
+
+/*
+    Normalize
+
+-------------------------------------
+*/
+
+body {
+    font-size: var(--font-size__global);
+    font-weight:var(--font-weight__regular);
+    color: var(--color__gray);
+    background-color: var(--color__gray-dark);
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+    font-family: var(--font-style__primary);
+}
+
+h1, h2 {
+    color: var(--color__orange);
+    font-weight: var(--font-weight__regular);
+}
+
+h3, p {
+    color: var(--color__gray);
+    font-weight: var(--font-weight__light);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color__orange);
+    font-weight: var(--font-weight__light);
+    @include transition();
+
+    @media (hover: hover) {
+        &:hover {
+            color: var(--color__blue-light);
+        }
+    }
+}
+
+img {
+    @include img100();
+    @include transition();
+
+    @media (hover: hover) {
+        &:hover {
+            box-shadow: var(--content-box__box-shadow);
+        }
+    }
+}

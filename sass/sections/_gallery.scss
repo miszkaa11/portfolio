@@ -1,0 +1,168 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/root" as *;
+
+/*
+    Gallery Section
+
+-------------------------------------
+*/
+
+.gallery {
+    &__content {
+
+        .gallery__inner {
+            @include flex-center-between();
+            margin-bottom: var(--gallery-card-inner__margin-bottom);
+
+            .gallery-text {
+                @include flex-basis-40();
+
+                .gallery__header,
+                .gallery__text {
+                    margin-bottom: var(--gallery-card__margin-bottom);
+                }
+
+                .gallery__header {
+                    color: var(--color__orange);
+                }
+
+                .gallery__text {
+                    color: var(--color__gray);
+                }
+            }
+
+            .gallery-image {
+                @include flex-basis-55();
+            }
+
+            .gallery-text,
+            .gallery-image {
+
+                .gallery__link,
+                .mobile__link {
+                    display: inline-block;
+                    position: relative;
+
+                    &:hover {
+                        color: var(--color__blue-light);
+                    }
+
+                    &::after {
+                        font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\e185";
+                        position: absolute;
+                        top: 0;
+                        right: -2.1rem;
+                    }
+
+                    &:hover::after {
+                        font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f07c";
+                        right: -2.5rem;
+                    }
+
+                    i {
+                        margin-left: 0.5rem;
+                        @include transition();
+
+                        &:hover {
+                            margin-left: 1rem;
+                        }
+                    }
+                }
+
+                .mobile__link {
+                    display: none;
+                }
+            }
+        }
+
+        .gallery__inner:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .gallery__inner:nth-child(2) .gallery-text,
+        .gallery__inner:nth-child(4) .gallery-text,
+        .gallery__inner:nth-child(6) .gallery-text,
+        .gallery__inner:nth-child(8) .gallery-text,
+        .gallery__inner:nth-child(10) .gallery-text,
+        .gallery__inner:nth-child(12) .gallery-text,
+        .gallery__inner:nth-child(14) .gallery-text {
+            order: 1;
+        }
+    }
+}
+
+/*
+    Gallery Section RWD
+
+-------------------------------------
+*/
+
+@media screen and (max-width: 999px) {
+    .gallery {
+
+        &__content {
+
+            .gallery__inner {
+                flex-direction: column;
+
+                .gallery-text,
+                .gallery-image {
+                    flex-basis: 100%;
+                    width: 100%;
+                }
+
+                .gallery-text {
+                    
+                    .gallery__text {
+                        margin-bottom: 1rem;
+                    }
+
+                    .gallery__link {
+                        display: none;
+                    }
+                }
+
+                .gallery-image {
+
+                    .mobile__link {
+                        display: inline-block;
+                    }
+                }
+            }
+
+            .gallery__inner:nth-child(2) .gallery-text,
+            .gallery__inner:nth-child(4) .gallery-text,
+            .gallery__inner:nth-child(6) .gallery-text,
+            .gallery__inner:nth-child(8) .gallery-text,
+            .gallery__inner:nth-child(10) .gallery-text,
+            .gallery__inner:nth-child(12) .gallery-text,
+            .gallery__inner:nth-child(14) .gallery-text {
+                order: unset;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 849px) {
+    .gallery {
+
+        &__content {
+
+            .gallery__inner {
+                .gallery-image {
+
+                    .mobile__link
+                     {
+                        &::after {
+                            right: -1.5rem;
+                        }
+
+                        &:hover::after {
+                            right: -2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

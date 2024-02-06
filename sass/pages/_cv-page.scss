@@ -1,0 +1,240 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/root" as *;
+
+/*
+    Cv Page
+
+-------------------------------------
+*/
+
+.cv {
+    margin-top: calc(var(--navigation__main-height) + 35px);
+
+    &__content {
+
+        // CV Title
+        .cv-title {
+            margin: 3rem 0;
+
+            .cv-title__header {
+                color: var(--color__orange);
+            }
+        }
+
+        // Cv Content
+        .cv-header {
+            @include flex-center-between();
+            margin-bottom: 2rem;
+
+            .cv-person {
+                @include flex-basis-40();
+            }
+
+            .cv-contact {
+                @include flex-basis-55();
+
+                .cv-title__header {
+                    color: var(--color__white);
+                    margin-bottom: 5rem;
+                }
+
+                .cv-contact__header,
+                .cv-contact__link {
+                    color: var(--color__orange);
+                    margin-bottom: 1rem;
+                }
+                
+                .cv-contact__link:last-of-type {
+                    margin-bottom: 0;
+                }
+                
+                .cv-contact__link {
+                    font-size: var(--font-size__header-m);
+                    line-height: var(--font-size__header-m);
+                    display: block;
+                    @include transition();
+
+                    &:hover {
+                        color: var(--color__white);
+                    }
+
+                    &:hover span,
+                    span {
+                        color: var(--color__orange);
+                    }
+                }
+            }
+        }
+
+        .cv-about {
+
+            .cv-about__text {
+                font-weight: var(--font-weight__regular);
+                color: var(--color__blue-light);
+                margin-bottom: 1rem;
+            }
+
+            .cv-about__text:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        .cv-experience {
+
+            .cv-experience__text {
+                color: var(--color__orange);
+
+                span {
+                    font-weight: var(--font-weight__regular);
+                }
+            }
+
+            .cv-experience__text:nth-child(9) {
+                margin-bottom: 1rem;
+            }
+        }
+
+        .cv-cta {
+            margin-bottom: 2rem;
+
+            .cv-cta__text {
+                color: var(--color__orange);
+            }
+
+            .cv-cta__text:last-of-type {
+                margin-bottom: 1rem;
+            }
+
+            .cv-cta__link {
+                color: var(--color__white);
+
+                &:hover {
+                    color: var(--color__orange);
+                }
+            }
+        }
+
+        .icons {
+            @include flex-center-between();
+
+            .cv-title {
+                margin-right: 3rem;
+            }
+
+            &__content {
+                width: 100%;
+
+                .icons__inner {
+
+                    i {
+                        color: var(--color__orange);
+
+                        &:hover {
+                            color: var(--color__orange);
+                        }
+                    }
+                }
+            }
+        }
+
+        .cv-stack {
+            display: flex;
+            margin-bottom: 3rem;
+
+            .wp-stack,
+            .front-stack {
+
+                .stack__text {
+                    color: var(--color__orange);
+                }
+            }
+
+            .wp-stack {
+                margin-right: 35%;
+            }
+        }
+
+        .cv-agreement {
+
+            .cv-agreement__text {
+                font-size: 1rem;
+                color: var(--color__orange);
+            }
+        }
+    }
+}
+
+/*
+    Cv Page RWD
+
+-------------------------------------
+*/
+
+@media screen and (max-width: 999px) {
+    .cv {
+
+        &__content {
+
+            .icons {
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .cv {
+
+        &__content {
+
+            .cv-header {
+                flex-direction: column;
+
+                .cv-person,
+                .cv-contact {
+                    flex-basis: 100%;
+                    width: 100%;
+                }
+
+                .cv-person {
+                    margin-bottom: 2rem;
+                }
+
+                .cv-contact {
+
+                    .cv-title__header {
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
+
+            .cv-stack {
+                justify-content: space-between;
+
+                .wp-stack {
+                    margin-right: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 399px) {
+    .cv {
+
+        &__content {
+
+            .cv-header {
+                flex-direction: column;
+
+                .cv-contact {
+
+                    .cv-contact__link {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+}

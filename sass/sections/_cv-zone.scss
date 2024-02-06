@@ -1,0 +1,55 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/root" as *;
+
+/*
+    Cv Zone Section
+
+-------------------------------------
+*/
+
+.cv-zone {
+    &__content {
+        @include flex-center();
+
+        .cv-zone__inner {
+            margin: 0 2rem;
+
+            .cv-zone__link {
+                @include flex-center-column();
+                color: var(--color__gray);
+
+                &:hover,
+                &:hover i {
+                    color: var(--color__blue-light);
+                }
+
+                i {
+                    color: var(--color__orange);
+                    margin-bottom: var(--content-box__margin-bottom);
+                    @include transition();
+                }
+            }
+        }
+    }
+}
+
+/*
+    Cv Zone Section RWD
+
+-------------------------------------
+*/
+
+@media screen and (max-width: 599px) {
+    .cv-zone {
+
+        &__content {
+
+            .cv-zone__inner {
+
+                i {
+                    font-size: 4em;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+/*
+    Variables
+
+-------------------------------------
+*/
+
+// Colors Main
+$color__orange: #D19A5E;
+$color__gray: #ABB2B2;
+$color__gray-dark: #21252B;
+$color__white: #FFFFFF;
+$color__blue-light: #43A3EF;
+$color__black: #000000;
+
+$color__header: $color__orange;
+$color__text: $color__gray;
+
+// Colors Technologies
+$color__javascript: #F4BF75;
+$color__react: #194D33;
+$color__html-5: #AB7558;
+$color__css-3: #3965BD;
+$color__wordpress: #21759B;
+$color__git: #F1502F;
+
+// Colors Socials
+$color__google: #4285F4;
+$color__linkedin: #2867B2;
+$color__mobile-phone: #FF6700;
+
+$colors-map: (
+    // Colors Main
+    'orange': $color__orange,
+    'gray': $color__gray,
+    'gray-dark': $color__gray-dark,
+    'white': $color__white,
+    'blue-light': $color__blue-light,
+    'black': $color__black,
+
+    // Colors Technologies
+    'javascript': $color__javascript,
+    'react': $color__react,
+    'html-5': $color__html-5,
+    'css-3': $color__css-3,
+    'wordpress': $color__wordpress,
+    'git': $color__git,
+
+    // Colors Socials
+    'google': $color__google,
+    'linkedin': $color__linkedin,
+    'mobile-phone': $color__mobile-phone
+);

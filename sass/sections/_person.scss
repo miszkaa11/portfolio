@@ -1,0 +1,76 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/root" as *;
+
+/*
+    Person Section
+
+-------------------------------------
+*/
+
+.person {
+    &__content {
+        @include flex-center-between();
+
+        .person__inner {
+            .person__header {
+                color: var(--color__orange);
+                margin-bottom: var(--content-box__margin-bottom-header);
+            }
+
+            .person__text {
+                color: var(--color__gray);
+                margin-bottom: var(--content-box__margin-bottom);
+            }
+
+            .person__text:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        .person__inner:first-of-type {
+            @include flex-basis-40();
+        }
+
+        .person__inner:last-of-type {
+            @include flex-basis-55();
+        }
+    }
+}
+
+/*
+    Person Section RWD
+
+-------------------------------------
+*/
+
+@media screen and (max-width: 767px) {
+    .person {
+
+        &__content {
+            align-items: flex-start;
+
+            .person__inner {
+
+                .person__header,
+                .person__text {
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 625px) {
+    .person {
+
+        &__content {
+            flex-direction: column;
+
+            .person__inner:first-of-type {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+
+

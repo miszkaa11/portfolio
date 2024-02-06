@@ -1,0 +1,188 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/root" as *;
+
+/*
+    Gallery Template
+
+-------------------------------------
+*/
+
+.gallery-template {
+    margin: var(--section__margin) 0;
+
+    &__content {
+        
+        .gallery-template-header {
+            @include flex-center-evenly();
+
+            .customer,
+            .date,
+            .task {
+
+                .gallery-template__header {
+                    color: var(--color__orange);
+                }
+            }
+        }
+        
+        .gallery-template__inner {
+            @include flex-gallery-template();
+            min-width: 320px;
+            max-width: 100%;
+            height: var(--gallery-template-image__height);
+            margin-top: var(--gallery-template-image__margin-top);
+            padding: 1rem;
+            overflow: hidden;
+            
+            .gallery-template__image {
+                background: var(--optionBackground);
+                background-size: auto 120%;
+                background-position: center;
+                position: relative;
+                min-width: var(--gallery-template-image__min-width);
+                margin: 0 0.5rem;
+                border-radius: var(--content-box__border-radius);
+                overflow: hidden;
+                cursor: pointer;
+                @include transition();
+
+                &:hover {
+                    box-shadow: var(--content-box__box-shadow);
+                }
+
+                .label {
+                    position: absolute;
+                    left: 1rem;
+                    bottom: 1rem;
+                    background-color: var(--color__white);
+                    display: flex;
+                    height: 40px;
+                    border-radius: var(--content-box__border-radius);
+                    @include transition();
+                    padding: 0 1rem;
+
+                    .icon,
+                    .info {
+                        @include flex-center();
+                        font-size: 0.85rem;
+                        font-weight: var(--font-weight__bold);
+                        color: var(--color__black);
+                        min-width: auto;
+                        width: auto;
+                        height: 40px;
+                        padding: 0 0.5rem;
+                    }
+
+                    .info {
+
+                        &__text {
+                            color: var(--color__black);
+                            font-weight: var(--font-weight__bold);
+                        }
+                    }
+                }
+
+                &.active {
+                    flex-grow: 10000;
+                    transform: scale(1);
+                    max-width: 1000px;
+                    margin: 0 0.5rem;
+                    border-radius: 1rem;
+                    background-size: auto 100%;
+
+                    .label {
+                        
+                        .info {
+
+                            > &__text {
+                                left: 0px;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+    Gallery Template RWD
+
+-------------------------------------
+*/
+
+@media screen and (max-width: 1199px) {
+    .gallery-template {
+
+        &__content {
+
+            .gallery-template__inner {
+                padding: 0;
+
+                .gallery-template__image {
+
+                    .label {
+                        left: 0.5rem;
+
+                        .icon,
+                        .info {
+                            font-size: 0.65rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .gallery-template {
+
+        &__content {
+
+            .gallery-template__inner {
+
+                .gallery-template__image {
+
+                    .label {
+                        left: -0.7rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .gallery-template {
+
+        &__content {
+
+            .gallery-template__inner {
+
+                .gallery-template__image {
+
+                    .label {
+                        padding: 0 0.6rem;
+
+                        .info {
+                            display: none;
+                        }
+                    }
+
+                    &.active {
+
+                        .info {
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
