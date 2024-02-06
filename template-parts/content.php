@@ -42,11 +42,7 @@
 	  if ( !empty($template_name) ) {
 		  if ( $template_name === 'szablon_pierwszy' ) {
 			  require_once 'tpls/gallery-template-1.php';
-		  } elseif ( $template_name === 'szablon_drugi' ) {
-			  require_once 'tpls/gallery-template-2.php';
-		  } elseif ( $template_name === 'szablon_trzeci' ) {
-			  require_once 'tpls/gallery-template-3.php';
-		  } else {
+		  }  else {
 			  echo 'NIE WYBRANO SZABLONU';
 		  }
 	  } else {
