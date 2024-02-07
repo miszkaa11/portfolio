@@ -64,7 +64,7 @@
                         <i class="fab fa-html5 fa-5x"></i>
                     </div>
                     <div class="icons__inner" data-aos="zoom-in">
-                        <i class="fab fa-css3-alt fa-5x"></i>
+                        <i class="fab fa-sass"></i>
                     </div>
                     <div class="icons__inner" data-aos="zoom-in">
                         <i class="fab fa-wordpress fa-5x"></i>

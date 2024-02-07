@@ -20,6 +20,13 @@
     transition: $attribute $time $easing !important;
 }
 
+@mixin scale($scaled: 0.9) {
+    transform: scale($scaled);
+    -o-transform: scale($scaled);
+    -moz-transform: scale($scaled);
+    -webkit-transform: scale($scaled);
+  }
+
 // Flexbox
 @mixin flex-center() {
     display: flex;

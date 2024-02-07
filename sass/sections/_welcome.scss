@@ -18,6 +18,10 @@
                 margin-bottom: var(--content-box__margin-bottom);
                 text-align: center;
 
+                &:first-of-type {
+                    font-family: var(--font-style__secondary);
+                }
+
                 &:last-of-type {
                     color: var(--color__blue-light);
                 }

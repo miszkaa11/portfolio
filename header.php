@@ -37,7 +37,7 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'portfolio' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="container-m">
+		<div class="container-nav">
 			<div class="site-branding">
 				<?php
 				the_custom_logo();
@@ -57,9 +57,6 @@
 				<?php endif; ?>
 			</div><!-- .site-branding -->
 			<nav id="site-navigation" class="main-navigation">
-				<div class="menu-loading content-box">
-					<a href="https://michallukaszewicz.pl/" class="loading__text header-m">#michallukaszewicz</a>
-				</div>
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
 					<!-- <?php esc_html_e( 'Primary Menu', 'portfolio' ); ?> -->
 					<span></span>

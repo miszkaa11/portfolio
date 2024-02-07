@@ -16,20 +16,23 @@
     --navigation__bg-color: #{color__gary-dark};
     --navigation__menu-item-padding: 0 2rem;
     --navigation__padding: 2rem 0;
+    --navigation__opacity: 0.9;
 
-    --navigation__width-mobile: 20%;
+    --navigation__width-mobile: 25%;
     --navigation__height-mobile: 100vh;
-    --navigation-toggle__width: 50px;
-    --navigation-toggle__height: 34px;
+    --navigation-toggle__width: 54px;
+    --navigation-toggle__height: 40px;
+
+    --navigation-toggle-span__height: 6px;
 
     // Scrolled Items
     --navigation__main-height-scrolled: 85px;
     --navigation__padding-scrolled: 1rem 0;
 
     --navigation-toggle__width-scrolled: 42px;
-    --navigation-toggle__height-scrolled: 28px;
+    --navigation-toggle__height-scrolled: 32px;
 
-    --font-size__header-m-scrolled: 1.375rem;
+    --navigation__logo-max-width-scrolled: 80%;
 
     // Section
     --section__margin: 10rem;
@@ -43,6 +46,7 @@
 
     // Fonts
     --font-style__primary: 'Roboto Condensed', sans-serif;
+    --font-style__secondary: 'Saira Stencil One', sans-serif;
 
     // Font Size
     --font-size__global: 1.375rem;
@@ -71,6 +75,7 @@
     --color__react: #{$color__react};
     --color__html-5: #{$color__html-5};
     --color__css-3: #{$color__css-3};
+    --color__sass: #{$color__sass};
     --color__wordpress: #{$color__wordpress};
     --color__git: #{$color__git};
 
@@ -84,7 +89,6 @@
     --content-box__margin-bottom: 1rem;
     --content-box__margin-bottom-header: 3rem;
     --content-box__box-shadow: 0px 0px 10px 0px rgba(171, 178, 178, 1);
-    --content-box__transform-scale: scale(0.7);
 
     --content-box__arrow-box-width: 60px;
     --content-box__arrow-box-height: 60px;
@@ -136,8 +140,10 @@
         // Navigation
         --navigation__width-mobile: 40%;
 
-        --navigation-toggle__width: 44px;
-        --navigation-toggle__height: 30px;
+        --navigation-toggle__width: 46px;
+        --navigation-toggle__height: 36px;
+
+        --navigation-toggle-span__height: 5px;
 
         // Font Size
         --font-size__global: 1.275rem;
@@ -171,6 +177,7 @@
         // Navigation
         --navigation__font-size: 1.475rem;
         --navigation__width-mobile: 50%;
+        --navigation__opacity: 1;
 
         // Gallery Cards
         --gallery-card-inner__margin-bottom: 5rem;
@@ -220,7 +227,7 @@
         --navigation__width-mobile: 100%;
 
         --navigation-toggle__width: 40px;
-        --navigation-toggle__height: 28px;
+        --navigation-toggle__height: 32px;
 
         // Content
         --content__padding: 0 1rem;
@@ -241,10 +248,10 @@
         // Scrolled Items
         --navigation__main-height-scrolled: 75px;
 
-        --navigation-toggle__width-scrolled: 36px;
-        --navigation-toggle__height-scrolled: 26px;
+        --navigation-toggle__width-scrolled: 38px;
+        --navigation-toggle__height-scrolled: 30px;
         
-        --font-size__header-m-scrolled: 1.125rem;
+        --navigation__logo-max-width-scrolled: 65%;
 
         // Section
         --section__margin-top-bottom: 6rem 0 3rem 0;

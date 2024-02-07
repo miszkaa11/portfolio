@@ -113,7 +113,7 @@
                 <i class="fab fa-html5"></i>
             </div>
             <div class="icons__inner" data-aos="zoom-in">
-                <i class="fab fa-css3-alt"></i>
+                <i class="fab fa-sass"></i>
             </div>
             <div class="icons__inner" data-aos="zoom-in">
                 <i class="fab fa-wordpress"></i>

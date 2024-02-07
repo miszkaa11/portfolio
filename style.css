@@ -650,7 +650,7 @@ select {
 --------------------------------------------- */
 .main-navigation {
 	display: flex;
-	width: 100%;
+	width: auto;
 }
 
 .main-navigation ul {

@@ -9,7 +9,7 @@ $(document).ready(function(){
         var $nav = jQuery(".site-header");
         var $nav2 = jQuery(".main-navigation");
         var $nav3 = jQuery(".menu-toggle");
-        var $nav4 = jQuery(".loading__text");
+        var $nav4 = jQuery(".site-branding img");
 
         $nav.toggleClass('scrolled', jQuery(this).scrollTop() > $nav.height());
         $nav2.toggleClass('scrolled', jQuery(this).scrollTop() > $nav.height());

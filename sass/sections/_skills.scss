@@ -19,7 +19,7 @@
                 @include transition();
 
                 &:hover {
-                    transform: var(--content-box__transform-scale);
+                    @include scale(0.7);
                 }
 
                 &.fa-js-square {
@@ -47,6 +47,13 @@
 
                     &:hover {
                         color: var(--color__css-3);
+                    }
+                }
+
+                &.fa-sass {
+
+                    &:hover {
+                        color: var(--color__sass);
                     }
                 }
 
