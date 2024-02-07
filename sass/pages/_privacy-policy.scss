@@ -35,3 +35,29 @@
         }
     }
 }
+
+/*
+    Privacy Policy RWD
+
+-------------------------------------
+*/
+
+@media screen and (max-width: 600px) {
+
+    .privacy-policy {
+
+        &__content {
+    
+            .privacy-policy-title__header {
+                margin: 1.5rem 0;
+            }
+
+            ul {
+                
+                li {
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+}

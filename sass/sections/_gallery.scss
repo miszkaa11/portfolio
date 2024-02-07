@@ -33,6 +33,7 @@
 
             .gallery-image {
                 @include flex-basis-55();
+                max-height: 395px;
             }
 
             .gallery-text,
@@ -52,6 +53,7 @@
                         position: absolute;
                         top: 0;
                         right: -2.1rem;
+                        @include transition();
                     }
 
                     &:hover::after {
@@ -123,9 +125,12 @@
                 }
 
                 .gallery-image {
+                    max-height: 100%;
 
                     .mobile__link {
+                        font-weight: var(--font-weight__regular);
                         display: inline-block;
+                        margin-top: 0.5rem;
                     }
                 }
             }
@@ -149,10 +154,10 @@
         &__content {
 
             .gallery__inner {
+
                 .gallery-image {
 
-                    .mobile__link
-                     {
+                    .mobile__link {
                         &::after {
                             right: -1.5rem;
                         }

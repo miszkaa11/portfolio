@@ -175,6 +175,10 @@
 
         &__content {
 
+            .cv-cta {
+                margin-bottom: 0;
+            }
+
             .icons {
                 flex-wrap: wrap;
             }
@@ -186,6 +190,10 @@
     .cv {
 
         &__content {
+
+            .cv-title {
+                margin: 2rem 0;
+            }
 
             .cv-header {
                 flex-direction: column;
@@ -207,7 +215,7 @@
                     }
                 }
             }
-
+            
             .cv-stack {
                 justify-content: space-between;
 

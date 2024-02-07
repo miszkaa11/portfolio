@@ -4,6 +4,19 @@ $(document).ready(function(){
     // AOS Lib
     AOS.init();
 
+    // Scrolled Nav
+    jQuery(document).scroll(function () {
+        var $nav = jQuery(".site-header");
+        var $nav2 = jQuery(".main-navigation");
+        var $nav3 = jQuery(".menu-toggle");
+        var $nav4 = jQuery(".loading__text");
+
+        $nav.toggleClass('scrolled', jQuery(this).scrollTop() > $nav.height());
+        $nav2.toggleClass('scrolled', jQuery(this).scrollTop() > $nav.height());
+        $nav3.toggleClass('scrolled', jQuery(this).scrollTop() > $nav.height());
+        $nav4.toggleClass('scrolled', jQuery(this).scrollTop() > $nav.height());
+    });
+
     // Offset
     $(".menu-item a").click(function () {
         $('.main-navigation').removeClass('toggled');

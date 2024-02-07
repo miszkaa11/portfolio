@@ -22,8 +22,18 @@
     --navigation-toggle__width: 50px;
     --navigation-toggle__height: 34px;
 
+    // Scrolled Items
+    --navigation__main-height-scrolled: 85px;
+    --navigation__padding-scrolled: 1rem 0;
+
+    --navigation-toggle__width-scrolled: 42px;
+    --navigation-toggle__height-scrolled: 28px;
+
+    --font-size__header-m-scrolled: 1.375rem;
+
     // Section
     --section__margin: 10rem;
+    --section__margin-top-bottom: 10rem 0 3rem 0;
     
     // Content
     --content__max-width-s: 1200px;
@@ -87,7 +97,7 @@
 
     // Gallery Cards
     --gallery-card__margin-bottom: 1rem;
-    --gallery-card-inner__margin-bottom: 7rem;
+    --gallery-card-inner__margin-bottom: 9rem;
     --gallery-card__max-width: 825px;
     --gallery-card__max-height: 405px;
 
@@ -147,6 +157,7 @@
         --title__margin: 8rem 0 5rem 0;
 
         // Gallery Cards
+        --gallery-card-inner__margin-bottom: 7rem;
         --gallery-card__margin-bottom: 0.5rem;
 
         // Gallery Template
@@ -158,7 +169,11 @@
   @media screen and (max-width: 1199px) {
     :root {
         // Navigation
+        --navigation__font-size: 1.475rem;
         --navigation__width-mobile: 50%;
+
+        // Gallery Cards
+        --gallery-card-inner__margin-bottom: 5rem;
 
         // Gallery Template
         --gallery-template-image__min-width: 150px;
@@ -220,6 +235,20 @@
 
   @media screen and (max-width: 599px) {
     :root {
+        // Navigation
+        --navigation__font-size: 1.275rem;
+
+        // Scrolled Items
+        --navigation__main-height-scrolled: 75px;
+
+        --navigation-toggle__width-scrolled: 36px;
+        --navigation-toggle__height-scrolled: 26px;
+        
+        --font-size__header-m-scrolled: 1.125rem;
+
+        // Section
+        --section__margin-top-bottom: 6rem 0 3rem 0;
+
         // Font Size
         --font-size__header-xl: 2.575rem;
 

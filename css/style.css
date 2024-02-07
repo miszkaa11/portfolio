@@ -26,7 +26,13 @@
   --navigation__height-mobile: 100vh;
   --navigation-toggle__width: 50px;
   --navigation-toggle__height: 34px;
+  --navigation__main-height-scrolled: 85px;
+  --navigation__padding-scrolled: 1rem 0;
+  --navigation-toggle__width-scrolled: 42px;
+  --navigation-toggle__height-scrolled: 28px;
+  --font-size__header-m-scrolled: 1.375rem;
   --section__margin: 10rem;
+  --section__margin-top-bottom: 10rem 0 3rem 0;
   --content__max-width-s: 1200px;
   --content__max-width-m: 1500px;
   --content__max-width-l: 1920px;
@@ -68,7 +74,7 @@
   --title__arrow-height: 60px;
   --title__margin-bottom: 1rem;
   --gallery-card__margin-bottom: 1rem;
-  --gallery-card-inner__margin-bottom: 7rem;
+  --gallery-card-inner__margin-bottom: 9rem;
   --gallery-card__max-width: 825px;
   --gallery-card__max-height: 405px;
   --gallery-template-image__height: 600px;
@@ -109,6 +115,7 @@
     --content-box__arrow-box-width: 55px;
     --content-box__arrow-box-height: 55px;
     --title__margin: 8rem 0 5rem 0;
+    --gallery-card-inner__margin-bottom: 7rem;
     --gallery-card__margin-bottom: 0.5rem;
     --gallery-template-image__height: 500px;
     --gallery-template-image__min-width: 180px;
@@ -116,7 +123,9 @@
 }
 @media screen and (max-width: 1199px) {
   :root {
+    --navigation__font-size: 1.475rem;
     --navigation__width-mobile: 50%;
+    --gallery-card-inner__margin-bottom: 5rem;
     --gallery-template-image__min-width: 150px;
   }
 }
@@ -155,6 +164,12 @@
 }
 @media screen and (max-width: 599px) {
   :root {
+    --navigation__font-size: 1.275rem;
+    --navigation__main-height-scrolled: 75px;
+    --navigation-toggle__width-scrolled: 36px;
+    --navigation-toggle__height-scrolled: 26px;
+    --font-size__header-m-scrolled: 1.125rem;
+    --section__margin-top-bottom: 6rem 0 3rem 0;
     --font-size__header-xl: 2.575rem;
     --gallery-card-inner__margin-bottom: 4rem;
     --form-input__height: 45px;
@@ -174,7 +189,7 @@ body {
   background-color: var(--color__gray-dark);
 }
 
-h1, h2, h3, h4, h5, h6, p, a {
+h1, h2, h3, h4, h5, h6, p, a, li {
   font-family: var(--font-style__primary);
 }
 
@@ -433,7 +448,7 @@ img {
   }
 }
 .footer {
-  margin: 10rem 0 3rem 0;
+  margin: var(--section__margin-top-bottom);
 }
 .footer .icons__content {
   display: -webkit-box;
@@ -486,6 +501,37 @@ img {
   .container-m,
   .container-l {
     padding: var(--content__padding);
+  }
+}
+@media screen and (max-width: 1200px) {
+  .site-header {
+    -webkit-transition: all 0.3s ease-in-out !important;
+    transition: all 0.3s ease-in-out !important;
+  }
+  .site-header.scrolled {
+    height: var(--navigation__main-height-scrolled);
+  }
+  .site-header .main-navigation {
+    -webkit-transition: all 0.3s ease-in-out !important;
+    transition: all 0.3s ease-in-out !important;
+  }
+  .site-header .main-navigation.scrolled {
+    padding: var(--navigation__padding-scrolled);
+  }
+  .site-header .main-navigation .menu-portfolio-primary-container .menu.nav-menu .menu-item-22 a {
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+  .site-header .menu-toggle {
+    -webkit-transition: all 0.3s ease-in-out !important;
+    transition: all 0.3s ease-in-out !important;
+  }
+  .site-header .menu-toggle.scrolled {
+    width: var(--navigation-toggle__width-scrolled);
+    height: var(--navigation-toggle__height-scrolled);
+  }
+  .site-header .loading__text.scrolled {
+    font-size: var(--font-size__header-m-scrolled);
   }
 }
 @media screen and (max-width: 999px) {
@@ -1022,12 +1068,18 @@ img {
 -------------------------------------
 */
 @media screen and (max-width: 999px) {
+  .cv__content .cv-cta {
+    margin-bottom: 0;
+  }
   .cv__content .icons {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 599px) {
+  .cv__content .cv-title {
+    margin: 2rem 0;
+  }
   .cv__content .cv-header {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1098,6 +1150,19 @@ img {
   margin-left: 2rem;
 }
 
+/*
+    Privacy Policy RWD
+
+-------------------------------------
+*/
+@media screen and (max-width: 600px) {
+  .privacy-policy__content .privacy-policy-title__header {
+    margin: 1.5rem 0;
+  }
+  .privacy-policy__content ul li {
+    margin-left: 1rem;
+  }
+}
 /*
     Welcome Section
 
@@ -1224,6 +1289,7 @@ img {
 .gallery__content .gallery__inner .gallery-image {
   -ms-flex-preferred-size: 55%;
       flex-basis: 55%;
+  max-height: 395px;
 }
 .gallery__content .gallery__inner .gallery-text .gallery__link,
 .gallery__content .gallery__inner .gallery-text .mobile__link,
@@ -1248,6 +1314,8 @@ img {
   position: absolute;
   top: 0;
   right: -2.1rem;
+  -webkit-transition: all 0.3s ease-in-out !important;
+  transition: all 0.3s ease-in-out !important;
 }
 .gallery__content .gallery__inner .gallery-text .gallery__link:hover::after,
 .gallery__content .gallery__inner .gallery-text .mobile__link:hover::after,
@@ -1315,8 +1383,13 @@ img {
   .gallery__content .gallery__inner .gallery-text .gallery__link {
     display: none;
   }
+  .gallery__content .gallery__inner .gallery-image {
+    max-height: 100%;
+  }
   .gallery__content .gallery__inner .gallery-image .mobile__link {
+    font-weight: var(--font-weight__regular);
     display: inline-block;
+    margin-top: 0.5rem;
   }
   .gallery__content .gallery__inner:nth-child(2) .gallery-text,
   .gallery__content .gallery__inner:nth-child(4) .gallery-text,
@@ -1676,5 +1749,9 @@ img {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     width: 100%;
+  }
+  .contact__content .contact-form .wpcf7-form input[type=checkbox] + span::before,
+  .contact__content .contact-form .wpcf7-form input[type=checkbox] + span::after {
+    top: -4px;
   }
 }/*# sourceMappingURL=style.css.map */

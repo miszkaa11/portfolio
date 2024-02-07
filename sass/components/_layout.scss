@@ -231,7 +231,7 @@
 
 // Footer
 .footer {
-    margin: 10rem 0 3rem 0;
+    margin: var(--section__margin-top-bottom);
 
     .icons__content {
         @include flex-center-evenly();
@@ -290,6 +290,59 @@
     .container-m,
     .container-l {
         padding: var(--content__padding);
+    }
+}
+
+// Navigation Scrolled + Main
+@media screen and (max-width: 1200px) {
+
+    .site-header {
+        @include transition();
+
+        &.scrolled {
+            height: var(--navigation__main-height-scrolled);
+        }
+        
+        .main-navigation {
+            @include transition();
+
+            &.scrolled {
+                padding: var(--navigation__padding-scrolled);
+            }
+
+            .menu-portfolio-primary-container {
+
+                .menu.nav-menu {
+
+                    .menu-item-22 {
+
+                        a {
+                            margin-left: 1rem;
+                            margin-top: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .menu-toggle {
+            @include transition();
+
+            &.scrolled {
+                width: var(--navigation-toggle__width-scrolled);
+                height: var(--navigation-toggle__height-scrolled);
+            }
+        }
+
+        .loading {
+        
+            &__text {
+              
+                &.scrolled {
+                    font-size: var(--font-size__header-m-scrolled);
+                }
+            }
+        }
     }
 }
 
