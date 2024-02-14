@@ -1,0 +1,27 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/root" as *;
+
+/*
+    Content Box
+
+-------------------------------------
+*/
+
+.content-box {
+    // Font Size
+    $font-sizes-map: (
+        'text': (font-size: var(--font-size__text), line-height: calc(var(--font-size__text) * 1.3)),
+        'header-m': (font-size: var(--font-size__header-m), line-height: calc(var(--font-size__header-m) * 1)),
+        'header-l': (font-size: var(--font-size__header-l), line-height: calc(var(--font-size__header-l) * 1)),
+        'header-xl': (font-size: var(--font-size__header-xl), line-height: calc(var(--font-size__header-xl) * 1.1))
+      );
+      
+      @each $class, $sizes in $font-sizes-map {
+        .#{$class} {
+          font-size: map-get($sizes, font-size);
+          line-height: map-get($sizes, line-height);
+        }
+    }
+}
+
+

@@ -13,6 +13,10 @@
     margin: var(--title__margin);
 
     &__content {
+
+        .title__header {
+            font-family: var(--font-style__secondary);
+        }
         
         .title__header,
         .subtitle__header,
@@ -28,9 +32,10 @@
 }
 
 // Arrow Box
+
 .arrow-box {
 
-    &__cta {
+    &__btn {
         @include flex-center();
         background-color: var(--color__orange);
         color: var(--color__gray-dark);
@@ -38,13 +43,26 @@
         height: var(--content-box__arrow-box-height);
         border-radius: var(--content-box__border-radius);
         @include transition();
+        border: 0;
+        cursor: pointer;
+        outline: none;
 
         &:hover {
             background-color: transparent;
+
+            i {
+                color: var(--color__blue-light);
+            }
         }
 
-        i {
-            font-size: 1.5em;
+        a {
+            @include img100();
+            @include flex-center();
+    
+            i {
+                color: var(--color__gray-dark);
+                font-size: 2.2em;
+            }
         }
     }
 }
@@ -218,16 +236,32 @@
 @media screen and (max-width: 999px) {
     .arrow-box {
 
-        &__cta {
+        &__btn {
     
-            i {
-                font-size: 1.3em;
+            a {
+
+                i {
+                    font-size: 1.8em;
+                }
             }
         }
     }
 }
 
 @media screen and (max-width: 599px) {
+    .arrow-box {
+
+        &__btn {
+    
+            a {
+
+                i {
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+
     .wpcf7-form {
 
         .accept-1-cta,

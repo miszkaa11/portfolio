@@ -8,13 +8,18 @@
 */
 
 .gallery {
+    margin-top: calc(var(--navigation__main-height) + 15px);
+    
     &__content {
 
         .gallery__inner {
             @include flex-center-between();
             margin-bottom: var(--gallery-card-inner__margin-bottom);
+            height: var(--gallery-card__content-height);
 
             .gallery-text {
+                @include flex-center-column();
+                align-items: flex-start;
                 @include flex-basis-40();
 
                 .gallery__header,
@@ -33,11 +38,15 @@
 
             .gallery-image {
                 @include flex-basis-55();
-                max-height: 395px;
+
+                .gallery__image {
+                    @include img100();
+                }
             }
 
             .gallery-text,
             .gallery-image {
+                height: 100%;
 
                 .gallery__link,
                 .mobile__link {

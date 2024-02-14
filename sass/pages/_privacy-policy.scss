@@ -8,7 +8,7 @@
 */
 
 .privacy-policy {
-    margin-top: var(--navigation__main-height);
+    margin-top: calc(var(--navigation__main-height) + 15px);
 
     &__content {
 

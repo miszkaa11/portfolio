@@ -17,6 +17,7 @@
             .cv-zone__link {
                 @include flex-center-column();
                 color: var(--color__gray);
+                text-align: center;
 
                 &:hover,
                 &:hover i {

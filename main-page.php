@@ -20,7 +20,11 @@
                 <h1 class="welcome__header header-xl">Front-End Developer</h1>
             </div>
             <div class="arrow-box" data-aos="zoom-in">
-                <a href="https://michallukaszewicz.pl/#person" class="arrow-box__cta"><i class="fas fa-arrow-down"></i></a>
+                <button class="arrow-box__btn">
+                    <a href="https://michallukaszewicz.pl/#person">
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                </button>    
             </div>
         </div>
     </div>
@@ -36,7 +40,11 @@
                 <h3 class="subtitle__header header-m" data-aos="zoom-in">Some informations about me</h3>
             </div>
             <div class="arrow-box" data-aos="zoom-in">
-                <a href="https://michallukaszewicz.pl/#gallery" class="arrow-box__cta"><i class="fas fa-arrow-down"></i></a>
+                <button class="arrow-box__btn">
+                    <a href="https://michallukaszewicz.pl/#gallery">
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                </button>    
             </div>
         </div>
         <div class="person__content content-box">
@@ -65,7 +73,11 @@
                 <h3 class="subtitle__header header-m" data-aos="zoom-in">Commercial projects</h3>
             </div>
             <div class="arrow-box" data-aos="zoom-in">
-                <a href="https://michallukaszewicz.pl/#icons" class="arrow-box__cta"><i class="fas fa-arrow-down"></i></a>
+                <button class="arrow-box__btn">
+                    <a href="https://michallukaszewicz.pl/#icons">
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                </button>    
             </div>
         </div>
         <div class="gallery__content content-box">
@@ -99,7 +111,11 @@
                 <h3 class="subtitle__header header-m" data-aos="zoom-in">Tools and technologies</h3>
             </div>
             <div class="arrow-box" data-aos="zoom-in">
-                <a href="https://michallukaszewicz.pl/#cv-zone" class="arrow-box__cta"><i class="fas fa-arrow-down"></i></a>
+                <button class="arrow-box__btn">
+                    <a href="https://michallukaszewicz.pl/#cv-zone">
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                </button>    
             </div>
         </div>
         <div class="icons__content content-box">
@@ -135,7 +151,11 @@
                 <h3 class="subtitle__header header-m" data-aos="zoom-in">Commercial experience</h3>
             </div>
             <div class="arrow-box" data-aos="zoom-in">
-                <a href="https://michallukaszewicz.pl/#contact" class="arrow-box__cta"><i class="fas fa-arrow-down"></i></a>
+                <button class="arrow-box__btn">
+                    <a href="https://michallukaszewicz.pl/#contact">
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                </button>    
             </div>
         </div>
         <div class="cv-zone__content content-box">
@@ -159,7 +179,11 @@
                 <h3 class="subtitle__header header-m" data-aos="zoom-in">Find me and ask on social media</h3>
             </div>
             <div class="arrow-box" data-aos="zoom-in">
-                <a href="https://michallukaszewicz.pl/#footer" class="arrow-box__cta"><i class="fas fa-arrow-down"></i></a>
+                <button class="arrow-box__btn">
+                    <a href="https://michallukaszewicz.pl/#footer">
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                </button>    
             </div>
         </div>
         <div class="contact__content content-box">

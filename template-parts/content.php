@@ -35,10 +35,6 @@
 	  <?php
 
 	  $template_name = get_field( 'tamplate_name' );
-	//   var_dump($template_name);
-	//   var_dump(!empty($template_name));
-	//   die();
-
 	  if ( !empty($template_name) ) {
 		  if ( $template_name === 'szablon_pierwszy' ) {
 			  require_once 'tpls/gallery-template-1.php';
@@ -64,12 +60,12 @@
 	  }
 
 
-	  wp_link_pages(
-		  array(
-			  'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'portfolio' ),
-			  'after'  => '</div>',
-		  )
-	  );
+	//   wp_link_pages(
+	// 	  array(
+	// 		  'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'portfolio' ),
+	// 		  'after'  => '</div>',
+	// 	  )
+	//   );
 	  ?>
   </div><!-- .entry-content -->
 

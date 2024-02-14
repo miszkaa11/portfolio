@@ -31,7 +31,7 @@
 					</div>
 					<div id="footer__content" class="footer__content content-box">
 						<div class="privacy-policy-cta">
-							<a href="/portfolio/polityka-prywatnosci/" class="privacy-policy__link text">.privacyPolicy</a>
+							<a href="/portfolio/privacy-policy/" class="privacy-policy__link text">.privacyPolicy</a>
 						</div>
 						<div class="copyrights">
 							<p class="copyrights__text f-style-primary text">Copyrights &copy; 2021 Michał Łukaszewicz</p>

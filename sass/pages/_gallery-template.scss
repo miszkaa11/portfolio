@@ -8,12 +8,31 @@
 */
 
 .gallery-template {
-    margin: var(--section__margin) 0;
+    width: 100%;
+    
+    .container-m {
+        padding: 0
+    }
 
     &__content {
+
+        .gallery-template-project {
+            @include flex-center();
+            margin: 2rem 0;
+
+            i {
+                margin-left: 0.5rem;
+            }
+        }
         
         .gallery-template-header {
-            @include flex-center-evenly();
+            @include flex-center-column();
+            text-align: center;
+
+            .customer,
+            .date {
+                margin-bottom: 2rem;
+            }
 
             .customer,
             .date,
@@ -85,7 +104,7 @@
                 &.active {
                     flex-grow: 10000;
                     transform: scale(1);
-                    max-width: 1000px;
+                    max-width: 1160px;
                     margin: 0 0.5rem;
                     border-radius: 1rem;
                     background-size: auto 100%;

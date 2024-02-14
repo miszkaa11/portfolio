@@ -4,16 +4,12 @@
 
 <section id="gallery-template" class="gallery-template">
     <div class="container-m">
-        <div class="title content-box">
-            <div class="title__content">
-                <a href="<?php the_field('template_anchor'); ?>" class="title__link header-l" data-aos="zoom-in"><?php the_field('template_title'); ?></a>
-                <h3 class="subtitle__header header-m" data-aos="zoom-in">Find me and ask on social media</h3>
-            </div>
-            <div class="arrow-box" data-aos="zoom-in">
-                <a href="https://michallukaszewicz.pl/#footer" class="arrow-box__cta"><i class="fa-solid fa-arrow-left"></i></a>
-            </div>
-        </div>
         <div class="gallery-template__content content-box">
+        
+            <div class="gallery-template-project">
+                <a href="<?php the_field('template_anchor');?>" class="gallery-template-project__link text" data-aos="zoom-in">see the project<i class="fa-solid fa-link"></i></a>
+            </div>
+
             <div class="gallery-template-header">
                 <div class="customer">
                     <h3 class="gallery-template__header header-m" data-aos="zoom-in">Customer:</h3>

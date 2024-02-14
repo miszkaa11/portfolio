@@ -1,0 +1,124 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/root" as *;
+
+/*
+    News Page
+
+-------------------------------------
+*/
+
+.news-page,
+.single-news-page {
+    margin-top: calc(var(--navigation__main-height) + 15px);
+
+    .category-news {
+        margin-bottom: var(--gallery-card-inner__margin-bottom);
+
+        .news-posts__content {
+            @include flex-center-between();
+            height: var(--news-card__content-height);
+
+            .news-posts__inner {
+                @include img100();
+
+                .entry-meta {
+
+                    .posted-on {
+                        font-family: var(--font-style__secondary);
+                        font-weight: var(--font-weight__light);
+                        line-height: var(--font-size__text);
+                    }
+                }
+
+                .entry-photo {
+                    @include img100();
+
+                    img {
+                        @include img100();
+                    }
+                }
+
+                .entry-meta, 
+                .entry-title,
+                .entry-content p {
+                    margin-bottom: var(--gallery-card__margin-bottom);
+                }
+            }
+    
+            .news-posts__inner:first-of-type {
+                @include flex-basis-40();
+                @include flex-center-column();
+                align-items: flex-start;
+            }
+    
+            .news-posts__inner:last-of-type {
+                @include flex-basis-55();
+            }
+        }
+    }
+}
+
+// Single News Page
+
+.single-news-page {
+    margin-top: calc(var(--navigation__main-height) + 15px);
+
+    &__content {
+
+        .entry-header {
+            display: none;
+        }
+
+        .entry-content,
+        .post-thumbnail {
+            @include flex-center-column();
+        }
+        
+        .entry-content {
+            margin: 2rem 0;
+        }
+        
+        .post-thumbnail {
+
+            img {
+                max-width: 500px;
+                height: 275px;
+            }
+        }
+    }
+}
+
+/*
+    News Page RWD
+
+-------------------------------------
+*/
+
+@media screen and (max-width: 999px) {
+    .news-page {
+
+        .news-posts__content {
+            flex-direction: column;
+        }
+    
+        .news-posts__inner:first-of-type {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    
+    .single-news-page {
+        
+        &__content {
+
+            .post-thumbnail {
+
+                img {
+                    height: auto;
+                }
+            }
+        }
+    }
+}
