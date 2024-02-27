@@ -11,16 +11,28 @@
     &__content {
         @include flex-center-between();
 
+
+        &:has(i:hover) {
+            > .icons__inner {
+                i {
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+          
+                    &:not(:hover) {
+                    transform: scale(.7);
+                    opacity: .7;
+                    }
+                }
+            }
+        }
+
         .icons__inner {
 
             i {
                 font-size: 6em;
                 color: var(--color__black);
                 @include transition();
-
-                &:hover {
-                    @include scale(0.7);
-                }
 
                 &.fa-js-square {
 

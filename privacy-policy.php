@@ -17,7 +17,9 @@
                 <h3 class="subtitle__header header-m" data-aos="zoom-in">See how I process your data</h3>
             </div>
             <div class="arrow-box" data-aos="zoom-in">
-                <a href="https://michallukaszewicz.pl/#cv-zone" class="arrow-box__cta"><i class="fa-solid fa-arrow-left"></i></a>
+                <a href="https://michallukaszewicz.pl/#footer" class="arrow-box__btn btn">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
             </div>
         </div>
         <div class="privacy-policy__content content-box">

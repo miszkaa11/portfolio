@@ -20,12 +20,10 @@
                 <h1 class="welcome__header header-xl">Front-End Developer</h1>
             </div>
             <div class="arrow-box" data-aos="zoom-in">
-                <button class="arrow-box__btn">
-                    <a href="https://michallukaszewicz.pl/#person">
-                        <i class="fas fa-arrow-down"></i>
-                    </a>
-                </button>    
-            </div>
+                <a href="https://michallukaszewicz.pl/#person" class="arrow-box__btn btn">
+                    <i class="fa-solid fa-arrow-down"></i>
+                </a>
+            </div> 
         </div>
     </div>
 </section>
@@ -40,12 +38,10 @@
                 <h3 class="subtitle__header header-m" data-aos="zoom-in">Some informations about me</h3>
             </div>
             <div class="arrow-box" data-aos="zoom-in">
-                <button class="arrow-box__btn">
-                    <a href="https://michallukaszewicz.pl/#gallery">
-                        <i class="fas fa-arrow-down"></i>
-                    </a>
-                </button>    
-            </div>
+                <a href="https://michallukaszewicz.pl/#gallery" class="arrow-box__btn btn">
+                    <i class="fa-solid fa-arrow-down"></i>
+                </a>
+            </div> 
         </div>
         <div class="person__content content-box">
             <div class="person__inner" data-aos="zoom-in">
@@ -70,15 +66,13 @@
         <div class="title content-box">
             <div class="title__content">
                 <h2 class="title__header header-l" data-aos="zoom-in">.work&Projects</h2>
-                <h3 class="subtitle__header header-m" data-aos="zoom-in">Commercial projects</h3>
+                <h3 class="subtitle__header header-m" data-aos="zoom-in">Commercial work</h3>
             </div>
             <div class="arrow-box" data-aos="zoom-in">
-                <button class="arrow-box__btn">
-                    <a href="https://michallukaszewicz.pl/#icons">
-                        <i class="fas fa-arrow-down"></i>
-                    </a>
-                </button>    
-            </div>
+                <a href="https://michallukaszewicz.pl/#icons" class="arrow-box__btn btn">
+                    <i class="fa-solid fa-arrow-down"></i>
+                </a>
+            </div> 
         </div>
         <div class="gallery__content content-box">
 
@@ -111,31 +105,29 @@
                 <h3 class="subtitle__header header-m" data-aos="zoom-in">Tools and technologies</h3>
             </div>
             <div class="arrow-box" data-aos="zoom-in">
-                <button class="arrow-box__btn">
-                    <a href="https://michallukaszewicz.pl/#cv-zone">
-                        <i class="fas fa-arrow-down"></i>
-                    </a>
-                </button>    
-            </div>
+                <a href="https://michallukaszewicz.pl/#cv-zone" class="arrow-box__btn btn">
+                    <i class="fa-solid fa-arrow-down"></i>
+                </a>
+            </div> 
         </div>
         <div class="icons__content content-box">
             <div class="icons__inner" data-aos="zoom-in">
-                <i class="fab fa-js-square"></i>
+                <?php echo get_icon( iconName: 'js-square')?>
             </div>
             <div class="icons__inner" data-aos="zoom-in">
-                <i class="fab fa-react"></i>
+                <?php echo get_icon( iconName: 'react')?>
             </div>
             <div class="icons__inner" data-aos="zoom-in">
-                <i class="fab fa-html5"></i>
+                <?php echo get_icon( iconName: 'html5')?>
             </div>
             <div class="icons__inner" data-aos="zoom-in">
-                <i class="fab fa-sass"></i>
+                <?php echo get_icon( iconName: 'sass')?>
             </div>
             <div class="icons__inner" data-aos="zoom-in">
-                <i class="fab fa-wordpress"></i>
+                <?php echo get_icon( iconName: 'wordpress')?>
             </div>
             <div class="icons__inner" data-aos="zoom-in">
-                <i class="fab fa-git"></i>
+                <?php echo get_icon( iconName: 'git')?>
             </div>
         </div>
     </div>
@@ -151,12 +143,10 @@
                 <h3 class="subtitle__header header-m" data-aos="zoom-in">Commercial experience</h3>
             </div>
             <div class="arrow-box" data-aos="zoom-in">
-                <button class="arrow-box__btn">
-                    <a href="https://michallukaszewicz.pl/#contact">
-                        <i class="fas fa-arrow-down"></i>
-                    </a>
-                </button>    
-            </div>
+                <a href="https://michallukaszewicz.pl/#contact" class="arrow-box__btn btn">
+                    <i class="fa-solid fa-arrow-down"></i>
+                </a>
+            </div> 
         </div>
         <div class="cv-zone__content content-box">
             <div class="cv-zone__inner" data-aos="zoom-in">
@@ -179,12 +169,10 @@
                 <h3 class="subtitle__header header-m" data-aos="zoom-in">Find me and ask on social media</h3>
             </div>
             <div class="arrow-box" data-aos="zoom-in">
-                <button class="arrow-box__btn">
-                    <a href="https://michallukaszewicz.pl/#footer">
-                        <i class="fas fa-arrow-down"></i>
-                    </a>
-                </button>    
-            </div>
+                <a href="https://michallukaszewicz.pl/#footer" class="arrow-box__btn btn">
+                    <i class="fa-solid fa-arrow-down"></i>
+                </a>
+            </div> 
         </div>
         <div class="contact__content content-box">
             <div class="contact-text">

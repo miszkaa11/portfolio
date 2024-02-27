@@ -9,6 +9,10 @@
  * @package portfolio
  */
 
+// Variables
+$linkedin = 'https://www.linkedin.com/in/micha%C5%82-%C5%82ukaszewicz-970634160/';
+$github = 'https://github.com/miszkaa11/';
+
 ?>
 
 	<footer id="colophon" class="site-footer">
@@ -16,41 +20,30 @@
 
 			<!-- Footer -->
 
-			<section id="footer" class="footer">
-				<div class="container-m">
-					<div class="icons__content">
-							<div class="icons__inner">
-								<a href="mailto:michal.lukaszewicz.dev@gmail.com" class="logo"><i class="fab fa-google"></i></a>
-							</div>
-							<div class="icons__inner">
-								<a href="https://www.linkedin.com/in/micha%C5%82-%C5%82ukaszewicz-970634160/" class="logo"><i class="fab fa-linkedin-in"></i></a>
-							</div>
-							<div class="icons__inner">
-								<a href="tel:731540795" class="logo"><i class="fas fa-mobile-alt"></i></a>
-							</div>
-					</div>
-					<div id="footer__content" class="footer__content content-box">
-						<div class="privacy-policy-cta">
-							<a href="/portfolio/privacy-policy/" class="privacy-policy__link text">.privacyPolicy</a>
-						</div>
-						<div class="copyrights">
-							<p class="copyrights__text f-style-primary text">Copyrights &copy; 2021 Michał Łukaszewicz</p>
-						</div>
-					</div>
-				</div>
-			</section>
+            <section id="footer" class="footer">
+                <div class="container-m">
+                    <div class="icons__content">
+                        <div class="icons__inner">
+                            <a href="mailto:<?php echo get_personal_info(fieldName: 'email')?>" class="logo"><?php echo get_icon( iconName: 'google')?></a>
+                        </div>
+                        <div class="icons__inner">
+                            <a href="<?= $linkedin ?>" class="logo"><?php echo get_icon( iconName: 'linkedin-in')?></a>
+                        </div>
+                        <div class="icons__inner">
+                            <a href="<?= $github ?>" class="logo"><?php echo get_icon( iconName: 'github' )?></a>
+                        </div>
+                    </div>
+                    <div id="footer__content" class="footer__content content-box">
+                        <div class="privacy-policy-cta">
+                            <a href="/portfolio/privacy-policy/" class="privacy-policy__link text">.privacyPolicy</a>
+                        </div>
+                        <div class="copyrights">
+                            <p class="copyrights__text f-style-primary text">Copyright &copy; <?= date( 'Y' ) ?> <?php echo get_personal_info(fieldName: 'name')?></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-			<!-- <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'portfolio' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'portfolio' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'portfolio' ), 'portfolio', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?> -->
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

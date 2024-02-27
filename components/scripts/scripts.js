@@ -6,10 +6,10 @@ $(document).ready(function(){
 
     // Scrolled Nav
     jQuery(document).scroll(function () {
-        var $nav = jQuery(".site-header");
-        var $nav2 = jQuery(".main-navigation");
-        var $nav3 = jQuery(".menu-toggle");
-        var $nav4 = jQuery(".site-branding img");
+        let $nav = jQuery(".site-header");
+        let $nav2 = jQuery(".main-navigation");
+        let $nav3 = jQuery(".menu-toggle");
+        let $nav4 = jQuery(".site-branding img");
 
         $nav.toggleClass('scrolled', jQuery(this).scrollTop() > $nav.height());
         $nav2.toggleClass('scrolled', jQuery(this).scrollTop() > $nav.height());
@@ -21,7 +21,7 @@ $(document).ready(function(){
     $(".menu-item a").click(function () {
         $('.main-navigation').removeClass('toggled');
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-            var target = $(this.hash);
+            let target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
             if (target.length) {
                 $('html,body').animate({
@@ -34,7 +34,7 @@ $(document).ready(function(){
 
       $('a[href*="#"]:not([href="#"])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-            var target = $(this.hash);
+            let target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
             if (target.length) {
                 $('html, body').animate({
@@ -63,5 +63,5 @@ $(document).ready(function(){
       e.stopPropagation();
       e.preventDefault();
     });
-    
+
 });

@@ -139,6 +139,20 @@ add_action( 'widgets_init', 'portfolio_widgets_init' );
  */
 function portfolio_scripts() {
 
+    // jQuery (SLIM VERSION!)
+    wp_enqueue_script('jquery', get_template_directory_uri() . '/node_modules/jquery/dist/jquery.slim.js');
+
+    // Theme Assets
+//    wp_enqueue_script('portfolio-main', get_template_directory_uri() . '/assets/js/scripts.js', ['jquery'], _S_VERSION);
+    wp_enqueue_style('portfolio-main', get_template_directory_uri() . "/assets/css/style.css", [], _S_VERSION);
+
+    // Font Awesome
+    wp_enqueue_script('Font Awesome', 'https://kit.fontawesome.com/5eef977532.js');
+
+    // Animate on Scroll
+    wp_enqueue_style('aos', 'https://unpkg.com/aos@next/dist/aos.css');
+    wp_enqueue_script('aos', 'https://unpkg.com/aos@next/dist/aos.js', ['jquery']);
+
 	wp_deregister_script( 'jquery' );
     wp_register_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js', false, NULL, false );
     wp_register_script('jqueryui', 'https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js', false, NULL, true );
@@ -146,13 +160,13 @@ function portfolio_scripts() {
 	wp_enqueue_script( 'jquery' );
     wp_enqueue_script( 'jqueryui' );
 
-	wp_enqueue_script('Font Awesome', 'https://kit.fontawesome.com/5eef977532.js');
+
 
 	// wp_enqueue_style( 'rwd', get_template_directory_uri() . '/components/UI/rwd.css' );
 	// wp_enqueue_style( 'components', get_template_directory_uri() . '/components/UI/components.css' );
 	// wp_enqueue_style( 'variables', get_template_directory_uri() . '/components/UI/variables.css' );
 
-	wp_enqueue_style( 'variables', get_template_directory_uri() . '/css/style.css' );
+//	wp_enqueue_style( 'variables', get_template_directory_uri() . '/css/style.css' );
 
 	wp_enqueue_style( 'portfolio-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'portfolio-style', 'rtl', 'replace' );
@@ -199,13 +213,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 // Shortcode
 add_filter('acf/format_value/type=textarea', 'do_shortcode');
 
-// AOS Init
-add_action( 'wp_enqueue_scripts', 'add_aos_animation' );
-function add_aos_animation() {
-	wp_enqueue_style('AOS_animate', 'https://unpkg.com/aos@2.3.1/dist/aos.css');
-	wp_enqueue_script('AOS', 'https://unpkg.com/aos@2.3.1/dist/aos.js');
-}
-
 // Max Upload
 @ini_set( 'upload_max_size' , '256M' );
 @ini_set( 'post_max_size', '256M');
@@ -229,3 +236,6 @@ function work_gallery_render_post($post) {
 			
 	<?php
 }
+
+// Require Extra Files
+require_once 'tools/utils.php';

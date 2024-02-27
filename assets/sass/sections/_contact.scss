@@ -90,25 +90,14 @@
                 }
 
                 .wpcf7-submit {
-                    width: auto;
-                    height: var(--button__height);
-                    background-color: var(--button__bg-color);
-                    color: var(--button__color);
+                    position: relative;
                     font-size: var(--button__font-size);
                     font-weight: var(--font-weight__bold);
-                    border: none;
-                    border-radius: var(--button__border-radius);
+                    width: auto;
+                    height: var(--button__height);
                     margin-top: 2rem;
-                    cursor: pointer;
                     padding: 0.5rem 1rem;
-                    position: relative;
-                    @include transition();
-
-                    &:hover {
-                        color: var(--button__color-hover);
-                        background-color: var(--button__bg-color-hover);
-                    }
-
+                    
                     i {
                         margin-left: 0.5rem;
                     }

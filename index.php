@@ -26,23 +26,21 @@ get_header();
 						<h3 class="subtitle__header header-m" data-aos="zoom-in">Stay updated</h3>
 					</div>
 					<div class="arrow-box" data-aos="zoom-in">
-						<button class="arrow-box__btn" onclick="history.back()">
-							<a href="javascript:void(0)">
-								<i class="fa-solid fa-arrow-left"></i>
-							</a>
-						</button>    
+						<a href="javascript:void(0)" class="arrow-box__btn btn" onclick="history.back()">
+							<i class="fa-solid fa-arrow-left"></i>
+						</a>
 					</div>
 				</div>
 
 				<?php
 					// WP_Query arguments
-					$args_news = array(
+					$args = array(
 						'category_name' => 'news', // specify the category slug here
 						'posts_per_page' => -1, // -1 to display all posts, you can change this number if needed
 					);
 
 					// The Query
-					$query = new WP_Query( $args_news );
+					$query = new WP_Query( $args );
 
 					// The Loop
 					if ( $query->have_posts() ) {
@@ -52,7 +50,7 @@ get_header();
 							// Include the Post-Type-specific template for the content
 							// If you want to override this in a child theme, then include a file
 							// called content-___.php (where ___ is the Post Type name) and that will be used instead
-							get_template_part( 'template-parts/content', 'posted' );
+							get_template_part( 'template-parts/content', 'news' );
 						}
 					} else {
 						// If no posts are found

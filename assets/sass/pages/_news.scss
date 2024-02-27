@@ -73,9 +73,13 @@
         .post-thumbnail {
             @include flex-center-column();
         }
-        
+
         .entry-content {
-            margin: 2rem 0;
+            margin: 2rem auto;
+
+            p {
+                margin: 0.5rem 0;
+            }
         }
         
         .post-thumbnail {

@@ -12,6 +12,8 @@
         @include flex-center-between();
 
         .person__inner {
+            max-height: var(--content-box__max-height);
+            
             .person__header {
                 font-family: var(--font-style__secondary);
                 color: var(--color__orange);

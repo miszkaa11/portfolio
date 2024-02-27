@@ -3,6 +3,10 @@
     Template Name:
         CV Page
     */
+
+//Variables
+$portfolio_link = 'www.michallukaszewicz.pl';
+
 ?>
 
 <?php
@@ -19,10 +23,10 @@
                     <img src="" data-src="/wp-content/uploads/2023/11/about_me_image.webp" alt="Picture Of Me" class="cv__image lazyload-image" data-aos="zoom-in">
                 </div>
                 <div class="cv-contact">
-                    <h3 class="cv-title__header header-m" data-aos="zoom-in">#Michał Łukaszewicz</h3>
-                    <h3 class="cv-contact__header header-m" data-aos="zoom-in">date of birth: 03/04/1989</h3>
-                    <a href="mailto:michal.lukaszewicz.dev@gmail.com" class="cv-contact__link" data-aos="zoom-in"><span>e-mail:</span> michal.lukaszewicz.dev@gmail.com</a>
-                    <a href="tel:731 540 795" class="cv-contact__link" data-aos="zoom-in"><span>phone:</span> 731 540 795</a>
+                    <h3 class="cv-title__header header-m" data-aos="zoom-in">#<?php echo get_personal_info( fieldName: 'name'); ?></h3>
+                    <h3 class="cv-contact__header header-m" data-aos="zoom-in">date of birth: <?php echo get_personal_info(fieldName: 'birthDate')?></h3>
+                    <a href="mailto:<?php echo get_personal_info(fieldName: 'email')?>" class="cv-contact__link" data-aos="zoom-in"><span>e-mail:</span> <?php echo get_personal_info(fieldName: 'email')?></a>
+                    <a href="tel:<?php echo get_personal_info(fieldName: 'phone')?>" class="cv-contact__link" data-aos="zoom-in"><span>phone:</span> <?php echo get_personal_info(fieldName: 'phone')?></a>
                 </div>
             </div>
             <div class="cv-about">
@@ -47,30 +51,30 @@
             <div class="cv-cta">
                 <p class="cv-cta__text text" data-aos="zoom-in">Go to my portfolio and see work experience</p>
                 <p class="cv-cta__text text" data-aos="zoom-in">and the projects I have completed:</p>
-                <a href="https://michallukaszewicz.pl/" class="cv-cta__link" data-aos="zoom-in">www.michallukaszewicz.pl</a>
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="cv-cta__link" data-aos="zoom-in"><?= $portfolio_link ?></a>
             </div>
             <div class="icons">
                 <div class="cv-title" data-aos="zoom-in">
                     <h3 class="cv-title__header">#Skills</h3>
                 </div>
-                <div class="icons__content">
+                <div class="icons__content content-box">
                     <div class="icons__inner" data-aos="zoom-in">
-                        <i class="fab fa-js-square fa-5x"></i>
+                        <?php echo get_icon( iconName: 'js-square')?>
                     </div>
                     <div class="icons__inner" data-aos="zoom-in">
-                        <i class="fab fa-react fa-5x"></i>
+                        <?php echo get_icon( iconName: 'react')?>
                     </div>
                     <div class="icons__inner" data-aos="zoom-in">
-                        <i class="fab fa-html5 fa-5x"></i>
+                        <?php echo get_icon( iconName: 'html5')?>
                     </div>
                     <div class="icons__inner" data-aos="zoom-in">
-                        <i class="fab fa-sass"></i>
+                        <?php echo get_icon( iconName: 'sass')?>
                     </div>
                     <div class="icons__inner" data-aos="zoom-in">
-                        <i class="fab fa-wordpress fa-5x"></i>
+                        <?php echo get_icon( iconName: 'wordpress')?>
                     </div>
                     <div class="icons__inner" data-aos="zoom-in">
-                        <i class="fab fa-git fa-5x"></i>
+                        <?php echo get_icon( iconName: 'git')?>
                     </div>
                 </div>
             </div>
