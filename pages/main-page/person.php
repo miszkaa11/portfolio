@@ -3,17 +3,7 @@
 
 <section id="person" class="person">
     <div class="container-m">
-        <div class="title content-box">
-            <div class="title__content">
-                <h2 class="title__header header-l" data-aos="zoom-in">.aboutMe</h2>
-                <h3 class="subtitle__header header-m" data-aos="zoom-in">Some informations about me</h3>
-            </div>
-            <div class="arrow-box" data-aos="zoom-in">
-                <a href="https://michallukaszewicz.pl/#gallery" class="arrow-box__btn btn">
-                    <i class="fa-solid fa-arrow-down"></i>
-                </a>
-            </div>
-        </div>
+        <?php echo generateTitleBox(".aboutMe", "Some informations about me", "gallery"); ?>
         <div class="person__content content-box">
             <div class="person__inner" data-aos="zoom-in">
                 <img src="" data-src="/wp-content/uploads/2023/11/about_me_image.webp" class="person__image lazyload-image" alt="Picture Of Me">

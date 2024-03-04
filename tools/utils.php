@@ -1,12 +1,21 @@
 <?php
 
+// Generate Section Link
+function generateSectionLink($sectionId) {
+    $baseLink = get_home_url();
+    $scrollLink = $baseLink . "#" . urlencode($sectionId);
+    return $scrollLink;
+}
+
 // Personal Info
 function get_personal_info($fieldName) {
     $userInfo = [
         'name' => 'Michał Łukaszewicz',
         'phone' => '73154095',
         'email' => 'michal.lukaszewicz.dev@gmail.com',
-        'birthDate' => '04/03/1989'
+        'birthDate' => '04/03/1989',
+        'linkedinLink' => 'https://www.linkedin.com/in/micha%C5%82-%C5%82ukaszewicz-970634160/',
+        'githubLink' => 'https://github.com/miszkaa11/'
     ];
 
     if ($fieldName === null ) {
@@ -19,12 +28,5 @@ function get_personal_info($fieldName) {
         }
     }
 }
-
-// Icons
-function get_icon(string $iconName, string $type = 'fab' ): string {
-    return "<i class='$type fa-$iconName'></i>";
-}
-
-
 
 

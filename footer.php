@@ -9,10 +9,6 @@
  * @package portfolio
  */
 
-// Variables
-$linkedin = 'https://www.linkedin.com/in/micha%C5%82-%C5%82ukaszewicz-970634160/';
-$github = 'https://github.com/miszkaa11/';
-
 ?>
 
 	<footer id="colophon" class="site-footer">
@@ -27,10 +23,10 @@ $github = 'https://github.com/miszkaa11/';
                             <a href="mailto:<?php echo get_personal_info(fieldName: 'email')?>" class="logo"><?php echo get_icon( iconName: 'google')?></a>
                         </div>
                         <div class="icons__inner">
-                            <a href="<?= $linkedin ?>" class="logo"><?php echo get_icon( iconName: 'linkedin-in')?></a>
+                            <a href="<?= get_personal_info(fieldName: 'linkedinLink') ?>" class="logo"><?php echo get_icon( iconName: 'linkedin-in')?></a>
                         </div>
                         <div class="icons__inner">
-                            <a href="<?= $github ?>" class="logo"><?php echo get_icon( iconName: 'github' )?></a>
+                            <a href="<?= get_personal_info(fieldName: 'githubLink') ?>" class="logo"><?php echo get_icon( iconName: 'github' )?></a>
                         </div>
                     </div>
                     <div id="footer__content" class="footer__content content-box">

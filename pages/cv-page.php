@@ -5,7 +5,7 @@
     */
 
 //Variables
-$portfolio_link = 'www.michallukaszewicz.pl';
+$portfolio_url = 'www.michallukaszewicz.pl';
 
 ?>
 
@@ -51,31 +51,14 @@ $portfolio_link = 'www.michallukaszewicz.pl';
             <div class="cv-cta">
                 <p class="cv-cta__text text" data-aos="zoom-in">Go to my portfolio and see work experience</p>
                 <p class="cv-cta__text text" data-aos="zoom-in">and the projects I have completed:</p>
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="cv-cta__link" data-aos="zoom-in"><?= $portfolio_link ?></a>
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="cv-cta__link" data-aos="zoom-in"><?= $portfolio_url ?></a>
             </div>
             <div class="icons">
                 <div class="cv-title" data-aos="zoom-in">
                     <h3 class="cv-title__header">#Skills</h3>
                 </div>
-                <div class="icons__content content-box">
-                    <div class="icons__inner" data-aos="zoom-in">
-                        <?php echo get_icon( iconName: 'js-square')?>
-                    </div>
-                    <div class="icons__inner" data-aos="zoom-in">
-                        <?php echo get_icon( iconName: 'react')?>
-                    </div>
-                    <div class="icons__inner" data-aos="zoom-in">
-                        <?php echo get_icon( iconName: 'html5')?>
-                    </div>
-                    <div class="icons__inner" data-aos="zoom-in">
-                        <?php echo get_icon( iconName: 'sass')?>
-                    </div>
-                    <div class="icons__inner" data-aos="zoom-in">
-                        <?php echo get_icon( iconName: 'wordpress')?>
-                    </div>
-                    <div class="icons__inner" data-aos="zoom-in">
-                        <?php echo get_icon( iconName: 'git')?>
-                    </div>
+                <div class="icons__content">
+                    <?php echo render_icons(); ?>
                 </div>
             </div>
             <div class="cv-stack">
