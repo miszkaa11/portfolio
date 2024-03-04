@@ -2,7 +2,7 @@
 
 <section id="contact" class="contact">
     <div class="container-m">
-        <?php echo generateTitleBox(".contact", "Find me and ask on social media", "footer"); ?>
+        <?php echo generate_title_box(".contact", "Find me and ask on social media", "footer"); ?>
         <div class="contact__content content-box">
             <div class="contact-text">
                 <h3 class="contact__header header-m"><i class="fa-regular fa-message"></i> If you would like to contact me, please use the&nbsp;contact&nbsp;form</h3>

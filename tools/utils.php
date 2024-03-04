@@ -1,7 +1,7 @@
 <?php
 
 // Generate Section Link
-function generateSectionLink($sectionId) {
+function generate_section_link($sectionId) {
     $baseLink = get_home_url();
     $scrollLink = $baseLink . "#" . urlencode($sectionId);
     return $scrollLink;

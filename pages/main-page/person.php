@@ -3,7 +3,7 @@
 
 <section id="person" class="person">
     <div class="container-m">
-        <?php echo generateTitleBox(".aboutMe", "Some informations about me", "gallery"); ?>
+        <?php echo generate_title_box(".aboutMe", "Some informations about me", "gallery"); ?>
         <div class="person__content content-box">
             <div class="person__inner" data-aos="zoom-in">
                 <img src="" data-src="/wp-content/uploads/2023/11/about_me_image.webp" class="person__image lazyload-image" alt="Picture Of Me">

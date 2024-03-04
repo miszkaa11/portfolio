@@ -2,7 +2,7 @@
 
 <section id="gallery" class="gallery">
     <div class="container-m">
-        <?php echo generateTitleBox(".work&Projects", "Commercial work", "icons"); ?>
+        <?php echo generate_title_box(".work&Projects", "Commercial work", "icons"); ?>
         <div class="gallery__content content-box">
 
             <?php
