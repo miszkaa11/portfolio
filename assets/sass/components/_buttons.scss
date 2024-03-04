@@ -1,0 +1,23 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/root" as *;
+
+/*
+    Buttons
+
+-------------------------------------
+*/
+
+// Btn
+.btn {
+  color: var(--button__color);
+  background-color: var(--button__bg-color);
+  border-radius: var(--button__border-radius);
+  cursor: pointer;
+  border: none;
+  @include transition();
+
+  &:hover {
+    color: var(--button__color-hover);
+    background-color: var(--button__bg-color-hover);
+  }
+}

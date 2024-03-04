@@ -1,0 +1,32 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/root" as *;
+
+/*
+    Title
+
+-------------------------------------
+*/
+
+// Title
+.title {
+  @include flex-center-column();
+  margin: var(--title__margin);
+
+  &__content {
+
+    .title__header {
+      font-family: var(--font-style__secondary);
+    }
+
+    .title__header,
+    .subtitle__header,
+    .title__link {
+      text-align: center;
+      margin-bottom: var(--content-box__margin-bottom);
+    }
+
+    .title__link {
+      display: block
+    }
+  }
+}
