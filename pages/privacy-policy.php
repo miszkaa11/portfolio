@@ -11,17 +11,9 @@
 
 <section id="privacy-policy" class="privacy-policy">
     <div class="container-m">
-        <div class="title content-box">
-            <div class="title__content">
-                <h2 class="title__header header-l" data-aos="zoom-in">.privacyPolicy</h2>
-                <h3 class="subtitle__header header-m" data-aos="zoom-in">See how I process your data</h3>
-            </div>
-            <div class="arrow-box" data-aos="zoom-in">
-                <a href="https://michallukaszewicz.pl/#footer" class="arrow-box__btn btn">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </a>
-            </div>
-        </div>
+
+        <?php echo generate_post_title_box(postTitle: ".privacyPolicy", postSubtitle: "See how I process your data")?>
+
         <div class="privacy-policy__content content-box">
             <h2 class="privacy-policy-title__header header-l">§.1 GENERAL</h2>
             <p class="privacy-policy__text text" data-aos="zoom-in">Pursuant to Article 12(1) of the Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data and repealing Directive 95/46/EC (hereinafter "RODO"), Michał Łukaszewicz, 10/17 Biskupa Albina Małysiaka Street, 30-389 Kraków (hereinafter "Michał Łukaszewicz Portfolio"), presents basic information regarding the processing of your personal data</p>

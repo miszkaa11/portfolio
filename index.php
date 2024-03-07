@@ -20,17 +20,7 @@ get_header();
 			<div class="container-s">
 				<div class="news-page__content">
 
-				<div class="title content-box">
-					<div class="title__content">
-						<h2 class="title__header header-l" data-aos="zoom-in">.news</h2>
-						<h3 class="subtitle__header header-m" data-aos="zoom-in">Stay updated</h3>
-					</div>
-					<div class="arrow-box" data-aos="zoom-in">
-						<a href="javascript:void(0)" class="arrow-box__btn btn" onclick="history.back()">
-							<i class="fa-solid fa-arrow-left"></i>
-						</a>
-					</div>
-				</div>
+                <?php echo generate_post_title_box(postTitle: ".news", postSubtitle: "Stay updated")?>
 
 				<?php
 					// WP_Query arguments

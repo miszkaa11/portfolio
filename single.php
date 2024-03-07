@@ -15,16 +15,7 @@ get_header();
 			<div class="container-m">
 				<div class="single-news-page__content">
 
-					<div class="title content-box">
-						<div class="title__content">
-							<h2 class="title__header header-l" data-aos="zoom-in"><?php echo get_the_title(); ?></h2>
-						</div>
-						<div class="arrow-box" data-aos="zoom-in">
-							<a href="javascript:void(0)" class="arrow-box__btn btn" onclick="history.back()">
-								<i class="fa-solid fa-arrow-left"></i>
-							</a>
-						</div>
-					</div>
+                    <?php echo generate_post_title_box(postTitle: get_the_title(), postSubtitle: "")?>
 
 					<?php
 					while ( have_posts() ) :

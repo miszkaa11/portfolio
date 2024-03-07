@@ -230,3 +230,4 @@ function work_gallery_render_post($post) {
 require_once 'tools/utils.php';
 require_once 'pages/parts/skills-icons.php';
 require_once 'pages/parts/title.php';
+require_once 'pages/parts/post-title.php';
