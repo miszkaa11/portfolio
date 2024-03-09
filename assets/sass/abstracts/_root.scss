@@ -39,9 +39,9 @@
     --section__margin-top-bottom: 10rem 0 3rem 0;
     
     // Content
-    --content__max-width-s: 1200px;
-    --content__max-width-m: 1500px;
-    --content__max-width-l: 1920px;
+    --content__max-width-s: #{$content__max-width-s};
+    --content__max-width-m: #{$content__max-width-m};
+    --content__max-width-l: #{$content__max-width-l};
     --content__padding: 0 2rem;
 
     // Fonts

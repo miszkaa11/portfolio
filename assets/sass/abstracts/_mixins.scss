@@ -4,6 +4,16 @@
 -------------------------------------
 */
 
+// Containers
+@mixin set-max-width($max-width) {
+    max-width: $max-width;
+}
+
+@mixin container-properties {
+    margin: 0 auto;
+    height: 100%;
+}
+
 // Helpers
 @mixin no-user-select() {
     -webkit-user-select: none;
@@ -25,7 +35,7 @@
     -o-transform: scale($scaled);
     -moz-transform: scale($scaled);
     -webkit-transform: scale($scaled);
-  }
+}
 
 // Flexbox
 @mixin flex-center() {

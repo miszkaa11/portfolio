@@ -1,5 +1,6 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/root" as *;
+@use "../abstracts/variables" as *;
 
 /*
     Layout
@@ -7,40 +8,13 @@
 -------------------------------------
 */
 
-// Containers
-.container-nav,
-.container-s,
-.container-m,
-.container-l {
-    margin: 0 auto;
-    height: 100%;
-}
-
-.container-s {
-    max-width: var(--content__max-width-s);
-}
-
-.container-nav,
-.container-m {
-    max-width: var(--content__max-width-m);
-}
-
-.container-l {
-    max-width: var(--content__max-width-l);
-}
-
+// Nav Grid
 .site-header {
 
     .container-nav {
         @include flex-center-between();
     }
 }
-
-/*
-    Navigation
-
--------------------------------------
-*/
 
 // Desktop Navigation
 .site-header {
@@ -269,16 +243,6 @@
     Media Queries
     Navigation, Footer
 --------------------------------------------------------*/
-
-// Containers
-@media screen and (max-width: 1564px) {
-    .container-nav,
-    .container-s,
-    .container-m,
-    .container-l {
-        padding: var(--content__padding);
-    }
-}
 
 // Navigation Scrolled + Main
 @media screen and (max-width: 1200px) {
